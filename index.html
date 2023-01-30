@@ -3,8 +3,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>M2R2 &#8212; M2R2 0.3.2 documentation</title>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>M2R2 &#8212; M2R2 0.3.3 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -39,7 +40,7 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="m2r2">
+  <section id="m2r2">
 <h1>M2R2<a class="headerlink" href="#m2r2" title="Permalink to this headline">¶</a></h1>
 <a class="reference external image-reference" href="https://pypi.python.org/pypi/m2r2"><img alt="PyPI" src="https://img.shields.io/pypi/v/m2r2.svg" /></a>
 <a class="reference external image-reference" href="https://pypi.python.org/pypi/m2r2"><img alt="PyPI version" src="https://img.shields.io/pypi/pyversions/m2r2.svg" /></a>
@@ -48,14 +49,14 @@
 <hr class="docutils" />
 <p>M2R2 converts a markdown file including reStructuredText (rst) markups to a valid
 rst format.</p>
-<div class="section" id="m2r-the-original">
+<section id="m2r-the-original">
 <h2>M2R: the original<a class="headerlink" href="#m2r-the-original" title="Permalink to this headline">¶</a></h2>
 <p>M2R2 is a fork of <a class="reference external" href="https://github.com/miyakogi/m2r">m2r</a> which hasn’t been updated for a long time
 and there’s been no response from the author about a PR fixing a serious issue that broke several
 pipelines using <code class="docutils literal notranslate"><span class="pre">sphinx3</span></code>. Every <code class="docutils literal notranslate"><span class="pre">m2r</span></code> config should work out of the box. I’ve changed some of the tooling for what I’m mostly using now. Below goes
 the original readme, changing only what’s needed to work with <code class="docutils literal notranslate"><span class="pre">m2r2</span></code>.</p>
-</div>
-<div class="section" id="why-another-converter">
+</section>
+<section id="why-another-converter">
 <h2>Why another converter?<a class="headerlink" href="#why-another-converter" title="Permalink to this headline">¶</a></h2>
 <p>I wanted to write sphinx document in markdown, since it’s widely used now and
 easy to write code blocks and lists. However, converters using pandoc or
@@ -63,8 +64,8 @@ recommonmark do not support many rst markups and sphinx extensions. For
 example, rst’s reference link like <code class="docutils literal notranslate"><span class="pre">see</span> <span class="pre">`ref`_</span></code> (this is very convenient in
 long document in which same link appears multiple times) will be converted to
 a code block in HTML like <code class="docutils literal notranslate"><span class="pre">see</span> <span class="pre">&lt;code&gt;ref&lt;/code&gt;_</span></code>, which is not expected.</p>
-</div>
-<div class="section" id="features">
+</section>
+<section id="features">
 <h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Basic markdown and some extensions (see below)</p>
@@ -102,8 +103,8 @@ a code block in HTML like <code class="docutils literal notranslate"><span class
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="installation">
+</section>
+<section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Python 2.7 or Python 3.4+ is required.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">m2r2</span>
@@ -117,18 +118,18 @@ a code block in HTML like <code class="docutils literal notranslate"><span class
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">m2r2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="usage">
+</section>
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="command-line">
+<section id="command-line">
 <h3>Command Line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">m2r2</span></code> command converts markdown file to rst format.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m2r2</span> <span class="n">your_document</span><span class="o">.</span><span class="n">md</span> <span class="p">[</span><span class="n">your_document2</span><span class="o">.</span><span class="n">md</span> <span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Then you will find <code class="docutils literal notranslate"><span class="pre">your_document.rst</span></code> in the same directory.</p>
-</div>
-<div class="section" id="programmatic-use">
+</section>
+<section id="programmatic-use">
 <h3>Programmatic Use<a class="headerlink" href="#programmatic-use" title="Permalink to this headline">¶</a></h3>
 <p>Import <code class="docutils literal notranslate"><span class="pre">m2r2.convert</span></code> function and call it with markdown text.
 Then it will return converted text.</p>
@@ -164,8 +165,8 @@ PyPI as rst format.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sphinx-integration">
+</section>
+<section id="sphinx-integration">
 <h3>Sphinx Integration<a class="headerlink" href="#sphinx-integration" title="Permalink to this headline">¶</a></h3>
 <p>In your conf.py, add the following lines.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
@@ -180,16 +181,16 @@ PyPI as rst format.</p>
 <p>Write index.md and run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>.</p>
 <p>When <code class="docutils literal notranslate"><span class="pre">m2r2</span></code> extension is enabled on sphinx and <code class="docutils literal notranslate"><span class="pre">.md</span></code> file is loaded, m2r2
 converts to rst and pass to sphinx, not making new <code class="docutils literal notranslate"><span class="pre">.rst</span></code> file.</p>
-<div class="section" id="mdinclude-directive">
+<section id="mdinclude-directive">
 <h4>mdinclude directive<a class="headerlink" href="#mdinclude-directive" title="Permalink to this headline">¶</a></h4>
 <p>Like <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">include::</span> <span class="pre">file</span></code> directive, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">mdinclude::</span> <span class="pre">file</span></code> directive inserts
 markdown file at the line.</p>
 <p>Note: do not use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">include::</span> <span class="pre">file</span></code> directive to include markdown file even if
 in the markdown file, please use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">mdinclude::</span> <span class="pre">file</span></code> instead.</p>
-</div>
-</div>
-</div>
-<div class="section" id="restrictions">
+</section>
+</section>
+</section>
+<section id="restrictions">
 <h2>Restrictions<a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>In the rst’s directives, markdown is not available. Please write in rst.</p></li>
@@ -207,8 +208,8 @@ in the markdown file, please use <code class="docutils literal notranslate"><spa
 </ul>
 <p>If you find any bug or unexpected behaviour, please report it to
 <a class="reference external" href="https://github.com/crossnox/m2r2/issues">Issues</a>.</p>
-</div>
-<div class="section" id="example">
+</section>
+<section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>See <a class="reference external" href="https://crossnox.github.io/m2r2/example.html">example document</a> and <a class="reference external" href="https://github.com/crossnox/m2r2/blob/master/docs/example.md">its
 source code</a>.</p>
@@ -216,34 +217,34 @@ source code</a>.</p>
 So you can see it as another example. Its <a class="reference external" href="http://wdom-py.readthedocs.io/en/latest/guide/index.html">HTML is
 here</a>, and <a class="reference external" href="https://github.com/miyakogi/wdom/tree/dev/docs/guide">its
 source code is here</a>.</p>
-<div class="section" id="demo-editor">
+<section id="demo-editor">
 <h3>Demo editor<a class="headerlink" href="#demo-editor" title="Permalink to this headline">¶</a></h3>
 <p><em>Note:</em> This hasn’t received any updates.</p>
 <p>Demo editor of m2r is available.
 If you are interested in m2r, please try it.</p>
 <p><a class="reference external" href="https://github.com/miyakogi/m2rdemo">https://github.com/miyakogi/m2rdemo</a></p>
-</div>
-</div>
-<div class="section" id="dev-install">
+</section>
+</section>
+<section id="dev-install">
 <h2>Dev install<a class="headerlink" href="#dev-install" title="Permalink to this headline">¶</a></h2>
 <p>Please install the <code class="docutils literal notranslate"><span class="pre">dev</span></code> dependencies and <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hooks with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements-dev.txt
 pre-commit install
 </pre></div>
 </div>
-</div>
-<div class="section" id="acknowledgement">
+</section>
+<section id="acknowledgement">
 <h2>Acknowledgement<a class="headerlink" href="#acknowledgement" title="Permalink to this headline">¶</a></h2>
 <p>m2r is written as an extension of
 <a class="reference external" href="http://mistune.readthedocs.io/en/latest/">mistune</a>, which is highly extensible
 pure-python markdown parser.
 Without the mistune, I couldn’t write this. Thank you!</p>
-</div>
-<div class="section" id="licence">
+</section>
+<section id="licence">
 <h2>Licence<a class="headerlink" href="#licence" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/crossnox/m2r2/blob/master/LICENSE">MIT</a></p>
-</div>
-<div class="section" id="contents">
+</section>
+<section id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
@@ -251,16 +252,16 @@ Without the mistune, I couldn’t write this. Thank you!</p>
 <li class="toctree-l1"><a class="reference internal" href="changes.html">Change Log</a></li>
 </ul>
 </div>
-</div>
-</div>
-<div class="section" id="indices-and-tables">
+</section>
+</section>
+<section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
-</div>
+</section>
 
 
           </div>
